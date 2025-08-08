@@ -95,16 +95,6 @@ Assertions are used to validate expected outcomes in test cases. They help deter
 | Library        | `org.testng.Assert`                  | `org.testng.asserts.SoftAssert`      |
 
 
-
-###  Hard Assert Example (TestNG)
-```java
-import org.testng.Assert;
-
-@Test
-public void testLogin() {
-    Assert.assertEquals(getTitle(), "Dashboard"); // If this fails, test stops here
-    Assert.assertTrue(isUserLoggedIn());          // Will not execute if above fails
-}
 - Types of Assertions in TestNG
     - assertEquals
     - assertTrue
@@ -114,6 +104,17 @@ public void testLogin() {
     - assertNotNull
     - assertSame 
     - assertNotSame 
+###  Hard Assert Example (TestNG)
+```java
+import org.testng.Assert;
+
+@Test
+public void testLogin() {
+    Assert.assertEquals(getTitle(), "Dashboard"); // If this fails, test stops here
+    Assert.assertTrue(isUserLoggedIn());          // Will not execute if above fails
+}
+```
+
 ## 🧪 Types of Assertions in TestNG
 
 1. **assertEquals(actual, expected)**  
@@ -265,4 +266,5 @@ Make sure to include this in your `pom.xml`:
 
 ---
 ---
+
 
